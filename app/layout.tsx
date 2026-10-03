@@ -10,17 +10,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('https://dentalstudiomanaus.com.br'),
   title: {
-    default: 'DentalDreams | Clínica Odontológica em Itapiranga',
+    default: 'Sorriso Mania | Clínica Odontológica em Manaus',
     template: '%s',
   },
   description:
-    'DentalDreams, em Itapiranga - Amazonas. Telefone: +55 92 8607-0067.',
+    'Sorriso Mania, em Manaus - Amazonas. Telefone: +55 92 9390-7570.',
   keywords: [
-    'DentalDreams',
-    'Clínica Odontológica Itapiranga',
-    'Dentista Itapiranga, Amazonas',
+    'Sorriso Mania',
+    'Clínica Odontológica Manaus',
+    'Dentista Manaus, Amazonas',
   ],
-  authors: [{ name: 'DentalDreams' }],
+  authors: [{ name: 'Sorriso Mania' }],
   icons: {
     icon: [
       { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F7F4EC] selection:text-[#202020]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#FFF5F5] selection:text-[#171717]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

@@ -84,12 +84,12 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '15:00', closes: '22:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '15:00', closes: '22:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '09:00', closes: '17:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '09:00', closes: '17:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '15:00', closes: '22:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '12:00' },
+      ...["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((dayOfWeek) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek,
+        opens: "00:00",
+        closes: "23:59",
+      })),
     ],
     medicalSpecialty: [
       'Dentistry',
